@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "title": "Life is a Struggle",
+    "author": "James Clear",
+    "description": "A practical guide to building good habits and breaking bad ones through simple, effective systems. It explains how small, consistent actions can lead to significant long-term changes, focusing on the power of routines, environment design, and incremental improvement. The book emphasizes making habits easy to start, difficult to break, and sustainable over time, helping readers create positive behavior that leads to personal and professional growth.",
+    "category": "Science",
+    "available_quantity": 5,
+    "image_url": "https://kathryncampbell.com/wp-content/uploads/2020/03/history_featured.jpg"
+  },
+  {
+    "id": 2,
+    "title": "The chemistry of Life ",
+    "author": "Robert C. Martin",
+    "description": "A practical handbook on agile software craftsmanship focused on writing clean, maintainable, and high-quality code. It emphasizes disciplined development practices, continuous improvement, and collaboration in software teams. The content guides developers on principles such as simplicity, readability, refactoring, and test-driven development, helping them build scalable and robust software systems while adopting a professional engineering mindset.",
+    "category": "Tech",
+    "available_quantity": 3,
+    "image_url": "https://images-platform.99static.com//stUY2We81Ot5_stCYoz5hW0sKHM=/0x0:2040x2043/fit-in/500x500/99designs-contests-attachments/149/149069/attachment_149069876"
+  },
+  {
+    "id": 3,
+    "title": "Stephen King",
+    "author": "Yuval Noah Harari",
+    "description": "A Brief History of Humankind explores the journey of Homo sapiens from early humans to the dominant species on Earth. It highlights key turning points such as the Cognitive Revolution, which enabled advanced thinking and communication, the Agricultural Revolution that led to settled societies, and the Scientific Revolution that transformed knowledge and technology. The book explains how humans developed complex systems like language, religion, money, and empires to organize large populations and shape civilizations. It offers a deep insight into how these developments influenced the modern world and encourages readers to reflect on humanity’s past, present, and future.",
+    "category": "Story",
+    "available_quantity": 4,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR018cFWlaWxvqh9F81lCVVHlBs6OTZ-DGFWA&s"
+  },
+  {
+    "id": 4,
+    "title": "Red Queen",
+    "author": "Andrew Hunt",
+    "description": "A classic book on software engineering that focuses on best practices, clean coding principles, and the right engineering mindset. It guides developers on how to write maintainable, readable, and efficient code while emphasizing discipline, problem-solving, and long-term thinking in software development. The book is widely regarded as essential reading for building strong foundations in professional software engineering.",
+    "category": "Tech",
+    "available_quantity": 6,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYJEl4BxJiYhY4wS7qHedeTUaEagCGUmD7MA&s"
+  },
+  {
+    "id": 5,
+    "title": "A Brief History of Time",
+    "author": "Stephen Hawking",
+    "description": "Explains the fundamentals of cosmology, black holes, and the structure of the universe in a simple and accessible way. It breaks down complex scientific concepts into easy-to-understand explanations, helping readers explore how the universe began, how it works, and the mysterious phenomena that exist within it.",
+    "category": "Science",
+    "available_quantity": 2,
+    "image_url": "https://wuka.co.uk/cdn/shop/files/1-rebel-girls-growing-up-powerful-cover.png?v=1775660976&width=1946"
+  },
+  {
+    "id": 6,
+    "title": "Harry Potter",
+    "author": "J.K. Rowling",
+    "description": "A young wizard’s journey through Hogwarts, where he discovers a hidden world of magic, friendship, and adventure. The story follows his growth as he learns powerful spells, uncovers secrets about his past, and faces dark forces that threaten the magical world. It is a tale of courage, loyalty, and the battle between good and evil in a richly imagined fantasy universe.",
+    "category": "Story",
+    "available_quantity": 10,
+    "image_url": "https://cdn.shopify.com/s/files/1/0070/1884/0133/t/8/assets/pf-71b40b91--Books_1200x.jpg?v=1620061288"
+  },
+  {
+    "id": 7,
+    "title": "You Don’t Know JS",
+    "author": "Kyle Simpson",
+    "description": "A comprehensive guide that explores the core concepts and advanced topics of JavaScript in depth. It covers essential fundamentals such as variables, functions, and scope, while also diving into more complex areas like asynchronous programming, closures, prototypes, and event handling. The content is designed to strengthen understanding of how JavaScript works under the hood and help developers build more efficient, scalable, and modern web applications.",
+    "category": "Tech",
+    "available_quantity": 7,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPtIJi17PHQ_kKO_f6-nydhR7ufkHTLxNk1A&s"
+  },
+  {
+    "id": 8,
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "description": "A inspiring story about following your dreams and discovering your true destiny. It follows a journey of self-discovery, courage, and perseverance as the protagonist overcomes obstacles, learns valuable life lessons, and grows through challenges. The story highlights the importance of believing in oneself and staying committed to one’s goals, even when the path is uncertain.",
+    "category": "Story",
+    "available_quantity": 8,
+    "image_url": "https://img.freepik.com/free-vector/flat-back-school-vertical-poster-template_23-2149041312.jpg?semt=ais_hybrid&w=740&q=80"
+  },
+  {
+    "id": 9,
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "description": "A guide to developing deep focus and eliminating distractions in order to achieve high productivity. It emphasizes the importance of concentration, disciplined work habits, and intentional time management to improve efficiency. The approach helps individuals train their mind to stay engaged in meaningful tasks, produce higher-quality results, and accomplish goals more effectively.",
+    "category": "Science",
+    "available_quantity": 4,
+    "image_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyDVqD3PKej2Aj9xulKEfzMgkBG7nfHrmCBg&s"
+  },
+  {
+    "id": 10,
+    "title": "Eloquent JavaScript",
+    "author": "Marijn Haverbeke",
+    "description": "A modern introduction to the JavaScript programming language, covering its core concepts and practical usage for web development. It explains fundamental topics such as variables, functions, objects, and DOM manipulation, while also introducing modern features like ES6 syntax, asynchronous programming, and modular code structure. Designed for beginners, it helps learners build a strong foundation for creating interactive and dynamic web applications.",
+    "category": "Tech",
+    "available_quantity": 5,
+    "image_url": "https://images-platform.99static.com//-tUjEZmbTnIMpiyAMy6CiS85KYY=/137x101:962x926/fit-in/500x500/projects-files/101/10168/1016819/4d520fb3-bab8-4d4a-a209-17731bb9da86.jpg"
+  },
+  {
+    "id": 11,
+    "title": "The Subtle Art of Not Giving a F*ck",
+    "author": "Mark Manson",
+    "description": "A thought-provoking guide that presents a counterintuitive approach to living a good life. It challenges common beliefs about success, happiness, and personal growth, encouraging readers to focus on what truly matters instead of external validation. Through practical insights and simple principles, it explores how accepting limitations, choosing meaningful struggles, and prioritizing values over constant positivity can lead to a more fulfilling and balanced life.",
+    "category": "Story",
+    "available_quantity": 6,
+    "image_url": "https://images-platform.99static.com//gc6U-Ay6SVWZ9MAA6nqSTFb4ujI=/0x0:1992x1989/fit-in/500x500/projects-files/66/6627/662729/f17db78f-9feb-400e-a716-cc619fd443ae.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Physics of the Impossible",
+    "author": "Michio Kaku",
+    "description": "An exploration of the science behind futuristic technologies and the possibilities they may bring to humanity. It breaks down advanced concepts in physics, engineering, and computer science to explain how emerging innovations like artificial intelligence, space exploration, robotics, and biotechnology could shape the future. The content encourages curiosity about scientific progress while imagining how these technologies might transform everyday life and society.",
+    "category": "Science",
+    "available_quantity": 3,
+    "image_url": "https://cdn.shopify.com/s/files/1/0070/1884/0133/t/8/assets/pf-65b8014f--Books19_1200x.jpg?v=1620061481"
+  }
+]
