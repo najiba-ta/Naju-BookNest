@@ -13,6 +13,7 @@ const RegisterPage = () => {
         console.log(email,photo); 
 
     }
+    // Register
     return (
         <div className='container mx-auto bg-slate-100 min-h-[80vh] flex justify-center items-center p-20'>
             <div className='p-4 rounded-lg bg-white p-16'>
