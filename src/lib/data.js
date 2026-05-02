@@ -1,12 +1,12 @@
 export async function getBooks() {
-  const res = await fetch("http://localhost:3000/book.json", {
+  const res = await fetch("https://naju-book-nest.vercel.app/book.json", {
     cache: "no-store",
   });
 
   return res.json();
 }
 export async function getAllBooks() {
-  const res = await fetch("http://localhost:3000/book.json", {
+  const res = await fetch("https://naju-book-nest.vercel.app/book.json", {
     cache: "no-store",
   });
 
@@ -14,7 +14,7 @@ export async function getAllBooks() {
 }
 
 export async function getBookById(id) {
-  const res = await fetch("http://localhost:3000/book.json", {
+  const res = await fetch("https://naju-book-nest.vercel.app/book.json", {
     cache: "no-store",
   });
 

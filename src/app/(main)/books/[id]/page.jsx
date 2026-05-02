@@ -9,7 +9,7 @@ import BorrowButton from './BorrowButton';
 const BooksDetailsPage =async ({params}) => {
     const {id} = await params;
     const books= await getBookById(id)
-    console.log(books);
+    console.log(books,"kichu");
     return (
         <div className='grid grid-cols-12 container mx-auto gap-20'>
             <div className='col-span-4'>
