@@ -6,9 +6,8 @@ This is a modern web application designed to digitize the traditional library sy
 ---
 
 ## Live Links
-Live Site: https://your-live-link.com  
-GitHub Repository: https://github.com/your-username/your-repo  
-
+Live Site: https://naju-book-nest.vercel.app
+GitHub Repository: https://github.com/najiba-ta/Naju-BookNest
 ---
 
 ## Features
