@@ -4,15 +4,21 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React from 'react';
 
-const Navlink = ({href,className,children}) => {
+const Navlink = ({ href, className, children }) => {
     const pathname = usePathname();
-    console.log(pathname,'naju');
 
-    const isActive = href === pathname
+    const isActive = pathname === href
     return (
-        <Link className={`${isActive ? " border-b-2 border-b-golden-500" : ""} ${className}`} href={href}>
+        <Link
+            href={href}
+           className={`${
+  isActive
+    ? "bg-cyan-800 text-white border border-transparent"
+    : "bg-white/10 text-cyan-700 hover:bg-white/20 border border-gray-300"
+} backdrop-blur-md px-5 py-2 rounded-xl transition
+ ${className}`} 
+        >
             {children}
-            
         </Link>
     );
 };
