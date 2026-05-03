@@ -26,7 +26,7 @@ const Banner = () => {
                       Borrow your favourites and enjoy reading anytime, anywhere
                   </p>
 
-                  <Link href={'/books/id'}>
+                  <Link href={'/allbook'}>
                     <button className='btn btn-soft bg-cyan-700 text-white mt-4 animate__animated animate__pulse animate__infinite flex items-center gap-2 mx-auto md:mx-0'>
                         Browse Now <FaArrowRight/>
                     </button>
