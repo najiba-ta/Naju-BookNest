@@ -29,7 +29,7 @@ ${open ? "bg-white/30 backdrop-blur-md shadow-lg" : "hidden md:flex"}`}>
                     <Navlink href={'/'} className={'text-cyan-800'}>Home</Navlink>
                 </li>
                 <li>
-                    <Navlink className={'text-cyan-700'} href={'/books/id'}>All Books</Navlink>
+                    <Navlink className={'text-cyan-700'} href={'/allbook'}>All Books</Navlink>
                 </li>
                 <li>
                     <Navlink className={'text-cyan-700'} href={'/profile'}>My Profile</Navlink>
