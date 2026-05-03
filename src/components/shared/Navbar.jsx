@@ -18,7 +18,7 @@ const Navbar = () => {
     return (
        <div className="sticky top-0 z-50 bg-white/20 backdrop-blur-md border-b border-white/30">
          <div className='container mx-auto px-4 py-4 flex justify-between items-center'>
-            <Image className='h-30' src={logo} height={30} width={220} alt='logo' />
+            <Image className='h-12' src={logo} height={30} width={220} alt='logo' />
 
             <ul className={`absolute md:static top-16 left-0 w-full md:w-auto 
 flex flex-col md:flex-row items-center gap-6 p-6 md:p-0 
@@ -55,5 +55,6 @@ ${open ? "bg-white/30 backdrop-blur-md shadow-lg" : "hidden md:flex"}`}>
        </div>
     );
 };
+// nothing
 
 export default Navbar;
