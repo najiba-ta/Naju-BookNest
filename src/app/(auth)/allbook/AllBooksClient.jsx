@@ -3,8 +3,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const AllBooksClient = ({ books }) => {
+    const router = useRouter();
+    const [loading, setLoading] = useState(false);
     const [search, setSearch] = useState("");
     const [category, setCategory] = useState("All");
 
@@ -18,6 +21,14 @@ const AllBooksClient = ({ books }) => {
 
         return matchSearch && matchCategory;
     });
+
+    const handleDetailsClick = (id) => {
+        setLoading(true);
+
+        setTimeout(() => {
+            router.push(`/books/${id}`);
+        }, 1000);
+    };
 
     return (
         <div className="container mx-auto my-7 flex flex-col md:flex-row gap-6 px-4">
@@ -50,10 +61,9 @@ const AllBooksClient = ({ books }) => {
                 </div>
             </div>
 
-            {/* MAIN CONTENT */}
+
             <div className="w-full md:w-3/4">
 
-                {/* SEARCH */}
                 <input
                     type="text"
                     placeholder="Search books..."
@@ -61,7 +71,6 @@ const AllBooksClient = ({ books }) => {
                     onChange={(e) => setSearch(e.target.value)}
                 />
 
-                {/* GRID */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                     {filteredBooks.map((book) => (
@@ -80,7 +89,10 @@ const AllBooksClient = ({ books }) => {
                             </h2>
 
                             <Link href={`/books/${book.id}`}>
-                                <button className="btn bg-cyan-800 text-white w-full mt-4">
+                                <button
+                                    onClick={() => handleDetailsClick(book.id)}
+                                    className="btn bg-cyan-800 text-white w-full mt-4"
+                                >
                                     Details
                                 </button>
                             </Link>
@@ -91,6 +103,25 @@ const AllBooksClient = ({ books }) => {
                 </div>
 
             </div>
+            {loading && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-md">
+
+                    <div className="relative flex flex-col items-center justify-center px-8 py-6 rounded-2xl 
+                        bg-white/10 border border-white/20 shadow-2xl backdrop-blur-xl">
+
+                        <div className="absolute w-32 h-32 bg-cyan-500/30 rounded-full blur-3xl animate-pulse"></div>
+
+                        <div className="relative animate-spin rounded-full h-14 w-14 border-[3px] 
+                            border-cyan-300 border-t-transparent"></div>
+
+                        <p className="mt-4 text-cyan-100 text-sm tracking-wide animate-pulse">
+                            Loading book details...
+                        </p>
+
+                    </div>
+
+                </div>
+            )}
 
         </div>
     );

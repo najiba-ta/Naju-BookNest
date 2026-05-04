@@ -11,7 +11,10 @@ import "animate.css";
 
 const LoginPage = () => {
 
+    const [loading, setLoading] = useState(false);
+
     const handleGoogleSignIn = async () => {
+        setLoading(true);
         await authClient.signIn.social({
             provider: "google",
         });
@@ -25,6 +28,7 @@ const LoginPage = () => {
     const handleLoginFunc = async (data) => {
 
         setLoginError("");
+        setLoading(true);
 
         const { data: value, error } = await authClient.signIn.email({
             email: data.email,
@@ -47,6 +51,7 @@ const LoginPage = () => {
                 setLoginError("Wrong password or email, please try again");
             }
 
+            setLoading(false);
             return;
         }
 
@@ -56,7 +61,6 @@ const LoginPage = () => {
     return (
         <div className="relative min-h-screen flex items-center justify-center px-4 py-10 overflow-hidden">
 
-            
             <div className="absolute inset-0 animate__animated animate__zoomIn animate__slow">
                 <img
                     src="/bg.jpg"
@@ -68,7 +72,6 @@ const LoginPage = () => {
             <div className="absolute inset-0 bg-black/60" />
 
             <div className='relative z-10 w-full max-w-md bg-white/20 backdrop-blur-xl border border-white/30 p-6 md:p-10 rounded-lg shadow-2xl animate__animated animate__fadeInUp'>
-
 
                 <h2 className='text-2xl md:text-4xl font-bold text-white text-center mb-2 animate__animated animate__fadeInDown'>
                     Welcome to Naju <span className='font-thin text-4xl text-cyan-600'>BookNest</span>
@@ -127,18 +130,21 @@ const LoginPage = () => {
                         )}
                     </fieldset>
 
-                    <button className='btn bg-cyan-800 text-white w-full mt-6 flex items-center justify-center gap-2 animate__animated animate__pulse animate__infinite'>
-                        Login <FaArrowAltCircleRight />
+                    <button
+                        disabled={loading}
+                        className='btn bg-cyan-800 hover:bg-cyan-700 text-white w-full mt-6 flex items-center justify-center gap-2 transition-all duration-300'
+                    >
+                        {loading ? "Please wait..." : <>Login <FaArrowAltCircleRight /></>}
                     </button>
 
                     <p className='text-sm md:text-lg text-cyan-100/80 font-thin text-center mt-6'>
                         OR
                     </p>
 
-                   
                     <button
                         onClick={handleGoogleSignIn}
                         type="button"
+                        disabled={loading}
                         className='btn w-full my-4 animate__animated animate__fadeInUp'
                     >
                         SignIn With Google
@@ -154,6 +160,23 @@ const LoginPage = () => {
                 </form>
 
             </div>
+            
+            {loading && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-md">
+                    <div className="relative flex flex-col items-center justify-center px-8 py-6 rounded-2xl 
+                                    bg-white/10 border border-white/20 shadow-2xl backdrop-blur-xl">
+
+                        <div className="absolute w-32 h-32 bg-cyan-500/30 rounded-full blur-3xl animate-pulse"></div>
+
+                        <div className="relative animate-spin rounded-full h-14 w-14 border-[3px] 
+                                        border-cyan-300 border-t-transparent"></div>
+
+                        <p className="mt-4 text-cyan-100 text-sm tracking-wide animate-pulse">
+                            Logging in...
+                        </p>
+                    </div>
+                </div>
+            )}
 
         </div>
     );

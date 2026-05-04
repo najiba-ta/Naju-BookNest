@@ -10,20 +10,20 @@ const BooksDetailsPage = async ({ params }) => {
   return (
     <div className='grid grid-cols-1 md:grid-cols-12 container mx-auto gap-8 md:gap-20 px-4 md:px-0'>
 
-      {/* Image Section */}
-      <div className='md:col-span-4 flex justify-center'>
+     
+      <div className='md:col-span-4 flex justify-center h-[80vh] md:h-auto'>
         <div className='w-full max-w-sm md:max-w-none'>
           <Image
             src={books.image_url}
             width={700}
             height={900}
             alt={books.title}
-            className='rounded-2xl w-full h-auto object-cover'
+            className='rounded-2xl w-full h-[50vh] md:h-[80vh] object-cover'
           />
         </div>
       </div>
 
-      {/* Details Section */}
+      
       <div className='md:col-span-8 card shadow-md hover:shadow-2xl hover:-translate-y-1 transition duration-300 rounded-3xl p-5 md:p-10'>
 
         <h2 className='text-2xl md:text-4xl font-bold text-cyan-800'>

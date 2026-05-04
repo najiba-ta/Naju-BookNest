@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "animate.css";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import ViewAllButton from "../ViewAllButton";
 
 const BookCard = async () => {
     const books = await getBooks();
@@ -39,13 +40,8 @@ const BookCard = async () => {
                 })}
             </div>
 
-            {/* Button */}
             <div className="text-center mt-8 mb-5 px-4">
-                <Link href={'/allbook'}>
-                    <button className="btn btn-soft text-base md:text-xl bg-cyan-700 text-white py-4 md:py-6 px-6 animate__animated animate__pulse animate__infinite flex items-center gap-2 mx-auto">
-                        View Details <FaArrowUpRightFromSquare />
-                    </button>
-                </Link>
+               <ViewAllButton/>
             </div>
 
         </div>
