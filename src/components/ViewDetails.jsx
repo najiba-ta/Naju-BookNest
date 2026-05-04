@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
-const ViewDetailsButton = () => {
+const ViewDetailsButton = ({id}) => {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
 
@@ -21,7 +21,7 @@ const ViewDetailsButton = () => {
             <button
                 onClick={handleClick}
                 disabled={loading}
-                className="btn btn-soft text-base md:text-xl bg-cyan-700 text-white py-4 md:py-4 px-5 flex items-center"
+                className="btn btn-soft text-base md:text-xl bg-cyan-700 text-white py-3 md:py-4 px-4 flex items-center"
             >
                 {loading ? "Loading..." : <>View Details </>}
             </button>

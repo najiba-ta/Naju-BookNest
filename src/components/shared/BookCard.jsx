@@ -32,8 +32,8 @@ const BookCard = async () => {
                             <p className="text-sm md:text-lg font-light text-gray-600 text-center">
                                 -{book.author}
                             </p>
-                            <div className="text-center mt-8 mb-5 px-4">
-                                <ViewDetailsButton/>
+                            <div className="flex justify-center text-center mt-6 mb-4 px-4">
+                                <ViewDetailsButton id = {book.id} />
                             </div>
                         </div>
                     );
