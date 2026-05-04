@@ -12,7 +12,7 @@ import "animate.css";
 
 const RegisterPage = () => {
 
-    const router = useRouter(); // ✅ added
+    const router = useRouter(); 
 
     const { register, handleSubmit, formState: { errors } } = useForm()
 
@@ -50,6 +50,7 @@ const RegisterPage = () => {
 
 
         toast.success("SignUp Successful!!");
+        await authClient.signOut();
         setTimeout(() => {
             router.push("/login");
         }, 1000);
