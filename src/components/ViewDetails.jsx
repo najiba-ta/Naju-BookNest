@@ -12,7 +12,7 @@ const ViewDetailsButton = () => {
         setLoading(true);
 
         setTimeout(() => {
-            router.push('/books');
+            router.push(`/books/${id}`);
         }, 1000);
     };
 
