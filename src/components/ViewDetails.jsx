@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 
-const ViewAllButton = () => {
+const ViewDetailsButton = () => {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
 
@@ -12,7 +12,7 @@ const ViewAllButton = () => {
         setLoading(true);
 
         setTimeout(() => {
-            router.push('/allbook');
+            router.push('/books/:path*');
         }, 1000);
     };
 
@@ -23,7 +23,7 @@ const ViewAllButton = () => {
                 disabled={loading}
                 className="btn btn-soft text-base md:text-xl bg-cyan-700 text-white py-4 md:py-6 px-6 animate__animated animate__pulse animate__infinite flex items-center gap-2 mx-auto"
             >
-                {loading ? "Loading..." : <>All Books <FaArrowUpRightFromSquare /></>}
+                {loading ? "Loading..." : <>View Details <FaArrowUpRightFromSquare /></>}
             </button>
 
             {loading && (
@@ -37,7 +37,7 @@ const ViewAllButton = () => {
                                         border-cyan-300 border-t-transparent"></div>
 
                         <p className="mt-4 text-cyan-100 text-sm tracking-wide animate-pulse">
-                            Loading books...
+                            Loading Details Page...
                         </p>
                     </div>
                 </div>
@@ -46,4 +46,4 @@ const ViewAllButton = () => {
     );
 };
 
-export default ViewAllButton;
+export default ViewDetailsButton;

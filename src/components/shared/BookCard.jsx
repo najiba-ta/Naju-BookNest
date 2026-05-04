@@ -2,6 +2,7 @@ import { getBooks } from "@/lib/data";
 import Image from "next/image";
 import "animate.css";
 import ViewAllButton from "../ViewAllButton";
+import ViewDetailsButton from "../ViewDetails";
 
 const BookCard = async () => {
     const books = await getBooks();
@@ -31,6 +32,9 @@ const BookCard = async () => {
                             <p className="text-sm md:text-lg font-light text-gray-600 text-center">
                                 -{book.author}
                             </p>
+                            <div className="text-center mt-8 mb-5 px-4">
+                                <ViewDetailsButton/>
+                            </div>
                         </div>
                     );
                 })}
