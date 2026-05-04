@@ -34,22 +34,38 @@ export default function UpdateProfilePage() {
     };
 
     return (
-        <div className='container mx-auto card shadow-2xl p-12'>
-            <form onSubmit={onSubmit} className="space-y-4">
-            Name
-            <input name="name" placeholder="Update your Name" className="input w-full" />
-            Image Url
-            <input name="image" placeholder="Update your Image URL" className="input w-full" />
+        <div className='container mx-auto px-4'>
+            <div className='card shadow-2xl p-6 sm:p-8 md:p-12 
+                            w-full sm:w-[80%] md:w-[60%] lg:w-[40%] 
+                            mx-auto'>
 
-            <button
-                type="submit"
-                className="btn bg-cyan-700 text-white w-full"
-                disabled={loading}
-            >
-                {loading ? "Updating..." : "Update"}
-            </button>
+                <form onSubmit={onSubmit} className="space-y-4">
 
-        </form>
+                    <label className="block text-sm sm:text-base">Name</label>
+                    <input 
+                        name="name" 
+                        placeholder="Update your Name" 
+                        className="input w-full" 
+                    />
+
+                    <label className="block text-sm sm:text-base">Image Url</label>
+                    <input 
+                        name="image" 
+                        placeholder="Update your Image URL" 
+                        className="input w-full" 
+                    />
+
+                    <button
+                        type="submit"
+                        className="btn bg-cyan-700 text-white w-full mt-2"
+                        disabled={loading}
+                    >
+                        {loading ? "Updating..." : "Update"}
+                    </button>
+
+                </form>
+
+            </div>
         </div>
     );
 }
