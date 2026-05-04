@@ -11,8 +11,16 @@ import { useRouter } from "next/navigation";
 import "animate.css";
 
 const RegisterPage = () => {
+    const [loading, setLoading] = useState(false);
+    const handleGoogleSignUp = async () => {
+        setLoading(true);
+        await authClient.signIn.social({
+            provider: "google",
+            callbackURL: "/",
+        });
+    };
 
-    const router = useRouter(); 
+    const router = useRouter();
 
     const { register, handleSubmit, formState: { errors } } = useForm()
 
@@ -26,13 +34,13 @@ const RegisterPage = () => {
         const { email, name, photo, password } = data;
 
         const { data: value, error } = await authClient.signUp.email({
-            name ,
-            email ,
-            password ,
+            name,
+            email,
+            password,
             image: photo,
             callbackURL: "/",
         });
-  console.log(error);
+        console.log(error);
         if (error) {
             const msg = error.message || "Registration failed!";
 
@@ -49,7 +57,7 @@ const RegisterPage = () => {
         }
 
 
-        toast.success("SignUp Successful!!");
+        toast.success("Account created! Please login.");
         await authClient.signOut();
         setTimeout(() => {
             router.push("/login");
@@ -80,7 +88,7 @@ const RegisterPage = () => {
 
                 <form onSubmit={handleSubmit(handleRegisterFunc)} className='space-y-4'>
 
-                  
+
                     <fieldset className="fieldset">
                         <legend className="fieldset-legend text-white font-semibold">
                             Your Name
@@ -158,7 +166,7 @@ const RegisterPage = () => {
                         )}
                     </fieldset>
 
-                  
+
                     <button className='btn bg-cyan-800 text-white w-full mt-6 flex items-center justify-center gap-2'>
                         Register <FaArrowAltCircleRight />
                     </button>
@@ -167,8 +175,13 @@ const RegisterPage = () => {
                         OR
                     </p>
 
-                    <button className='btn w-full'>
-                        SignUp With Google
+                    <button
+                        onClick={handleGoogleSignUp}
+                        type="button"
+                        disabled={loading}
+                        className='btn w-full'
+                    >
+                        {loading ? "Redirecting..." : "SignUp With Google"}
                     </button>
 
                     <p className='text-cyan-100/80 text-center mt-4'>
