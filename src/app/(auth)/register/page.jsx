@@ -16,7 +16,7 @@ const RegisterPage = () => {
         setLoading(true);
         await authClient.signIn.social({
             provider: "google",
-            callbackURL: "/",
+            callbackURL: "/login",
         });
     };
 
