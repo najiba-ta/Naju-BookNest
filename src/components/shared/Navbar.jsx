@@ -51,7 +51,7 @@ const Navbar = () => {
                 {isPending ? (<p><span className="loading loading-spinner text-primary loading-xl"></span></p>) : user ? (<div className=' flex gap-6 items-center'>
                     <div className='flex  items-center gap-4'>
                         <h2 className='text-cyan-700 font-bold ml-4'>Hello, {user?.name}</h2>
-                        {user.image && <Image className='bg-cyan-700 border mr-4 rounded-full' src={user?.image} width={50} height={50} alt={user.name} />}
+                        {user.image && <Image className='bg-cyan-700 border mr-4 rounded-full h-10 w-10' src={user?.image} width={50} height={50} alt={user.name} />}
                     </div>
                     <button onClick={async () => await authClient.signOut()} className=' btn btn-soft bg-cyan-700 text-white'>LogOut</button>
                 </div>)
