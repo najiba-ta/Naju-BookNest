@@ -12,7 +12,7 @@ const ViewDetailsButton = () => {
         setLoading(true);
 
         setTimeout(() => {
-            router.push('/books/:path*');
+            router.push('/books');
         }, 1000);
     };
 
@@ -21,7 +21,7 @@ const ViewDetailsButton = () => {
             <button
                 onClick={handleClick}
                 disabled={loading}
-                className="btn btn-soft text-base md:text-xl bg-cyan-700 text-white py-4 md:py-4 px-5 flex items-center gap-2 mx-auto"
+                className="btn btn-soft text-base md:text-xl bg-cyan-700 text-white py-4 md:py-4 px-5 flex items-center"
             >
                 {loading ? "Loading..." : <>View Details </>}
             </button>
