@@ -3,7 +3,6 @@
 
 import React, { useState } from 'react';
 import logo from '../../../public/logo.png';
-// import UserAvatar '../../../public/useravater.png'
 import Image from 'next/image';
 import Link from 'next/link';
 import Navlink from './Navlink';
