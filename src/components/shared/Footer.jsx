@@ -26,7 +26,7 @@ export default function Footer() {
             <Link href="/" className="hover:text-cyan-800 transition">
               Home
             </Link>
-            <Link href="/all-books" className="hover:text-cyan-800 transition">
+            <Link href="/allbook" className="hover:text-cyan-800 transition">
               All Books
             </Link>
             <Link href="/profile" className="hover:text-cyan-800 transition">
