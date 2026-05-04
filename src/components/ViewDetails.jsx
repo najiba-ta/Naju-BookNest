@@ -21,9 +21,9 @@ const ViewDetailsButton = () => {
             <button
                 onClick={handleClick}
                 disabled={loading}
-                className="btn btn-soft text-base md:text-xl bg-cyan-700 text-white py-4 md:py-6 px-6 animate__animated animate__pulse animate__infinite flex items-center gap-2 mx-auto"
+                className="btn btn-soft text-base md:text-xl bg-cyan-700 text-white py-4 md:py-4 px-5 flex items-center gap-2 mx-auto"
             >
-                {loading ? "Loading..." : <>View Details <FaArrowUpRightFromSquare /></>}
+                {loading ? "Loading..." : <>View Details </>}
             </button>
 
             {loading && (
