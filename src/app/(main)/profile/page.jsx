@@ -13,7 +13,7 @@ return(
 
     <div className='container mx-auto'>
        {user && <div className='card shadow-2xl p-16 w-[40%] mx-auto'>
-      <Image className='border border-cyan-700 rounded-full mx-auto' src={user?.image} width={100} height={100} alt='user?.name'/>
+      <Image className='border border-cyan-700 rounded-full mx-auto w-30 h-30' src={user?.image} width={100} height={100} alt='user?.name'/>
 
       <h2 className='text-2xl font-bold text-center mt-6'>{user?.name}</h2>
       <h2 className='text-center'>{user?.email}</h2>
