@@ -6,8 +6,6 @@ export default function Footer() {
     <footer className="bg-base-200 text-base-content mt-20">
 
       <div className="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-10">
-
-        {/* Logo & About */}
         <div>
           <h2 className="text-2xl font-bold mb-4 hover:text-cyan-800 transition">
            Naju BookNest
@@ -19,7 +17,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Quick Links */}
         <div>
           <h3 className="text-lg font-semibold mb-4 hover:text-cyan-800 transition">
             Quick Links
@@ -41,7 +38,6 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Contact & Social */}
         <div>
           <h3 className="text-lg font-semibold mb-4 hover:text-cyan-800 transition">
             Contact Us
@@ -51,7 +47,6 @@ export default function Footer() {
             Email: support@najubooknest.com
           </p>
 
-          {/* Social Icons */}
           <div className="flex gap-5 text-xl">
             <FaFacebook className="cursor-pointer hover:text-blue-500 hover:scale-110 transition" />
             <FaTwitter className="cursor-pointer hover:text-sky-400 hover:scale-110 transition" />
@@ -62,7 +57,6 @@ export default function Footer() {
 
       </div>
 
-      {/* Bottom Bar */}
       <div className="text-center py-4 border-t border-gray-300 text-sm text-gray-500">
         © {new Date().getFullYear()} Naju BookNest. All rights reserved.
       </div>

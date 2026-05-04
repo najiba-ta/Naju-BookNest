@@ -26,7 +26,6 @@ const ViewAllButton = () => {
                 {loading ? "Loading..." : <>View Details <FaArrowUpRightFromSquare /></>}
             </button>
 
-            {/* 🔥 Premium Loader */}
             {loading && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-md">
                     <div className="relative flex flex-col items-center justify-center px-8 py-6 rounded-2xl 

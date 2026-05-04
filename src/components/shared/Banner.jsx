@@ -10,7 +10,6 @@ const Banner = () => {
     return (
         <div className="flex flex-col-reverse md:flex-row justify-between container mx-auto items-center px-4 md:px-0 gap-10 md:gap-0">
 
-              {/* Text Section */}
               <div className="text-center md:text-left">
                      <p className='flex gap-3 items-center border rounded-full px-4 py-2 border-gray-200 w-fit md:w-80 text-cyan-700 mx-auto md:mx-0'>
                         <GiBookCover className='text-cyan-700' />
@@ -33,7 +32,6 @@ const Banner = () => {
                   </Link>
               </div>
 
-              {/* Image Section */}
               <div className="animate__animated animate__fadeInUp w-full md:w-auto flex justify-center">
                <Image 
                  src={BannerImg} 

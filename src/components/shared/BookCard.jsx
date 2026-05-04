@@ -1,8 +1,6 @@
 import { getBooks } from "@/lib/data";
 import Image from "next/image";
-import Link from "next/link";
 import "animate.css";
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import ViewAllButton from "../ViewAllButton";
 
 const BookCard = async () => {
@@ -10,8 +8,6 @@ const BookCard = async () => {
 
     return (
         <div>
-
-            {/* Cards Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 container mx-auto my-7 px-4">
 
                 {books.slice(0, 4).map((book) => {
